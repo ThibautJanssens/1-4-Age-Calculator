@@ -101,8 +101,10 @@ function calcAge() {
     let yearValue = yearSelector[yearSelector.selectedIndex].value;
 
     //calculate the age of the person
-    currentTotal = parseInt(currentYear) * 10000 + parseInt(currentMonth) * 100 + parseInt(currentDay);
-    total = yearValue * 10000 + monthInt * 100 + dayValue;
+    let currentTotal = parseInt(currentYear) * 10000 + parseInt(currentMonth) * 100 + parseInt(currentDay);
+    let total = parseInt(yearValue) * 10000 + monthInt * 100 + parseInt(dayValue);
+    console.log(yearValue + " " + monthInt + " " + dayValue)
+    console.log(total)
     yearsOld = Math.floor((currentTotal - total) / 10000);
 
     //display the age
